@@ -418,9 +418,9 @@ object SettingsPlayerScreen : SearchableSettings {
                                 )
                             }.toImmutableList(),
                             onSelectionChanged = {
-                                newLength = it
+                                newLength = it + 1
                             },
-                            startIndex = skipIntroLengthValue,
+                            startIndex = skipIntroLengthValue - 1,
                         )
                     },
                 )
