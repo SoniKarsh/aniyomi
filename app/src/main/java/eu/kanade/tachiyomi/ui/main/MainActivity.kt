@@ -364,15 +364,15 @@ class MainActivity : BaseActivity() {
             if (BuildConfig.INCLUDE_UPDATER) {
                 try {
                     val result = AppUpdateChecker().checkForUpdate(context)
-                    if (result is GetApplicationRelease.Result.NewUpdate) {
-                        val updateScreen = NewUpdateScreen(
-                            versionName = result.release.version,
-                            changelogInfo = result.release.info,
-                            releaseLink = result.release.releaseLink,
-                            downloadLink = result.release.getDownloadLink(),
-                        )
-                        navigator.push(updateScreen)
-                    }
+//                    if (result is GetApplicationRelease.Result.NewUpdate) {
+//                        val updateScreen = NewUpdateScreen(
+//                            versionName = result.release.version,
+//                            changelogInfo = result.release.info,
+//                            releaseLink = result.release.releaseLink,
+//                            downloadLink = result.release.getDownloadLink(),
+//                        )
+//                        navigator.push(updateScreen)
+//                    }
                 } catch (e: Exception) {
                     logcat(LogPriority.ERROR, e)
                 }
